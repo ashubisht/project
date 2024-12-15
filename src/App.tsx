@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[#13141f] p-6">
       <FluidCursor />
-      <div className="max-w-6xl mx-auto grid grid-cols-12 gap-6">
+      <div className="lg:max-w-6xl lg:mx-auto lg:grid sm:grid-cols-12 sm:gap-6 sm:min-h-screen sm:flex sm:flex-col ">
         {/* Top Row */}
         <Card className="col-span-3 flex flex-col justify-between">
           <h1 className="text-3xl font-bold text-white mb-2">Transforming Ideas into Scalable Tech
