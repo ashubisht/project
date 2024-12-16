@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[#13141f] p-6 relative">
       <FluidCursor />
-      <div className="lg:max-w-6xl lg:mx-auto lg:grid sm:grid-cols-12 md:min-h-screen md:flex md:flex-col md:gap-6 gap-4 flex flex-col">
+      <div className="lg:max-w-7xl lg:mx-auto lg:grid sm:grid-cols-12 md:min-h-screen md:flex md:flex-col md:gap-6 gap-4 flex flex-col">
 
         {/* Top Row */}
         <Card className="col-span-3 flex flex-col justify-between">
@@ -79,7 +79,7 @@ function App() {
         </Card>
 
         {/* Center Circle with Image */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-[150px] h-[150px] md:w-[150px] md:h-[150px] rounded-full border-4 border-gray-800 shadow-lg bg-black mt-[7rem] lg:mt-[-3rem] lg:w-[200px] lg:h-[200px]">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-[150px] h-[150px] md:w-[150px] md:h-[150px] rounded-full border-4 border-gray-800 shadow-lg bg-black mt-[7rem] lg:mt-[-3rem] lg:w-[18rem] lg:h-[18rem]">
         <img
             src="https://i.pinimg.com/736x/73/ec/b3/73ecb3d1c2d7392bd6022464e519d605.jpg" // Replace with your image path
             alt="Center Image"
