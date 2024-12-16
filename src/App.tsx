@@ -9,7 +9,7 @@ import FluidCursor from './components/FluidCursor';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#13141f] p-6">
+    <div className="min-h-screen bg-[#13141f] p-6 relative">
       <FluidCursor />
       <div className="lg:max-w-6xl lg:mx-auto lg:grid sm:grid-cols-12 md:min-h-screen md:flex md:flex-col md:gap-6 gap-4 flex flex-col">
 
@@ -54,7 +54,7 @@ function App() {
         {/* Middle Row */}
         <MetricCard value="8+" label="Years Of Experience" className="col-span-3" />
 
-        <div className="col-span-6 grid grid-cols-2 gap-6">
+        <div className="col-span-6 grid grid-cols-2 gap-6 row-span-2 h-auto">
           <FeatureCard
             className="top-right"
             icon={GitBranch}
@@ -72,7 +72,6 @@ function App() {
 
         {/* GitHub and LinkedIn Card (Center-Right) */}
         <Card className="col-span-3 flex justify-center items-center flex-col">
-
           <h2 className="text-2xl font-bold text-white mb-2">Blockchain Solutions</h2>
           <div className="text-sm text-gray-400">
             <div>Developed Redbelly Blockchain and several enterprise projects</div>
@@ -80,14 +79,12 @@ function App() {
         </Card>
 
         {/* Center Circle with Image */}
-        <div className="relative col-span-12 flex justify-center items-center">
-          <div className="absolute flex items-center justify-center w-50 lg:h-[200px] lg:-top-[450px] bg-black rounded-full border-4 border-gray-800 shadow-lg h-[140px] top-[-545px]">
-            <img
-              src="https://i.pinimg.com/736x/73/ec/b3/73ecb3d1c2d7392bd6022464e519d605.jpg" // Replace with your image URL
-              alt="Center Circle"
-              className="rounded-full object-cover w-full h-full"
-            />
-          </div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-[150px] h-[150px] md:w-[150px] md:h-[150px] rounded-full border-4 border-gray-800 shadow-lg bg-black mt-[7rem] lg:mt-[-3rem] lg:w-[200px] lg:h-[200px]">
+        <img
+            src="https://i.pinimg.com/736x/73/ec/b3/73ecb3d1c2d7392bd6022464e519d605.jpg" // Replace with your image path
+            alt="Center Image"
+            className="rounded-full object-cover w-full h-full"
+          />
         </div>
 
         {/* Bottom Row */}
@@ -102,10 +99,8 @@ function App() {
               <i className='bx bxl-linkedin-square text-[35px]'></i>
             </button>
           </a>
-
         </Card>
 
-        <div className="col-span-6"></div>
         <MetricCard
           value="1.2M"
           label="Transactions handled in a single job cycle"
