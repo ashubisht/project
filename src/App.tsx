@@ -1,17 +1,27 @@
-import React from 'react';
-import { GitBranch, KeyRound } from 'lucide-react';
-import { Logo } from './components/Logo';
-import { Card } from './components/Card';
-import { MetricCard } from './components/MetricCard';
-import { FeatureCard } from './components/FeatureCard';
+import React from "react";
+import { GitBranch, KeyRound } from "lucide-react";
+import { Logo } from "./components/Logo";
+import { Card } from "./components/Card";
+import { MetricCard } from "./components/MetricCard";
+import { FeatureCard } from "./components/FeatureCard";
 import "./index.css";
-import FluidCursor from './components/FluidCursor';
+import FluidCursor from "./components/FluidCursor";
+import { GridPattern } from "./components/magicui/dot-pattern";
+import FollowingEye from "./components/following-eye";
+import { LetterPullup, TypingAnimation } from "./components/magicui/TypingAnimation";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#13141f] p-6 relative">
-      <FluidCursor />
-      <div className="lg:max-w-7xl lg:mx-auto lg:grid sm:grid-cols-12 md:min-h-screen md:flex md:flex-col md:gap-6 gap-4 flex flex-col">
+    <div className="relative min-h-screen bg-[#13141f] p-6">
+      {/* GridPattern as the background */}
+      <div className="absolute inset-0 z-0">
+        <GridPattern width={40} height={40} cx={20} cy={20} cr={2} />
+        <FluidCursor />
+
+      </div>
+
+      {/* Foreground Content */}
+      <div className="relative z-10 lg:max-w-7xl lg:mx-auto lg:grid sm:grid-cols-12 md:min-h-screen md:flex md:flex-col md:gap-6 gap-4 flex flex-col">
 
         {/* Top Row */}
         <Card className="col-span-3 flex flex-col justify-between">
@@ -24,7 +34,10 @@ function App() {
 
         <Card className="col-span-6 text-center py-12 bg-[radial-gradient(circle_at_bottom,#c09bff,#825aff_40%,#4b1ea8_80%)]">
           <Logo />
-          <h1 className="text-4xl font-bold text-white mt-6 mb-4">Blockchain & Software Engineer</h1>
+          <h1 className="text-4xl font-bold text-white mt-6 mb-4">
+            {/* <LetterPullup words="Blockchain & Software Engineer" delay={0.11} /> */}
+            Blockchain & Software Engineer
+          </h1>
         </Card>
 
         <Card className="col-span-3 flex justify-between flex-col rounded-lg p-6">
@@ -79,24 +92,21 @@ function App() {
         </Card>
 
         {/* Center Circle with Image */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-[150px] h-[150px] md:w-[150px] md:h-[150px] rounded-full border-4 border-gray-800 shadow-lg bg-black mt-[7rem] lg:mt-[-3rem] lg:w-[18rem] lg:h-[18rem]">
-        <img
-            src="https://i.pinimg.com/736x/73/ec/b3/73ecb3d1c2d7392bd6022464e519d605.jpg" // Replace with your image path
-            alt="Center Image"
-            className="rounded-full object-cover w-full h-full"
-          />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[18rem] lg:h-[18rem] rounded-full border-4 border-gray-800 shadow-lg bg-white mt-[9rem] md:mt-[5rem] lg:mt-[-3rem]">
+          <FollowingEye />
         </div>
+
 
         {/* Bottom Row */}
         <Card className="col-span-3 flex justify-center items-center gap-5">
           <a href="https://github.com/ashubisht" target="_blank" rel="noopener noreferrer">
             <button className="text-lg font-semibold text-white bg-gray-800 hover:bg-gray-700 py-2 px-6 rounded-2xl">
-              <i className='bx bxl-github text-[35px]'></i>
+              <i className="bx bxl-github text-[35px]"></i>
             </button>
           </a>
           <a href="https://www.linkedin.com/in/utkarsh-bisht/" target="_blank" rel="noopener noreferrer">
             <button className="text-lg font-semibold text-white bg-blue-800 hover:bg-blue-700 py-2 px-6 rounded-2xl">
-              <i className='bx bxl-linkedin-square text-[35px]'></i>
+              <i className="bx bxl-linkedin-square text-[35px]"></i>
             </button>
           </a>
         </Card>
