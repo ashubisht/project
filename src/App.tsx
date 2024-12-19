@@ -24,7 +24,7 @@ function App() {
       <div className="relative z-10 lg:max-w-7xl lg:mx-auto lg:grid sm:grid-cols-12 md:min-h-screen md:flex md:flex-col md:gap-6 gap-4 flex flex-col">
 
         {/* Top Row */}
-        <Card className="col-span-3 flex flex-col justify-between">
+        <Card className="col-span-3 flex flex-col justify-between bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f]">
           <h1 className="text-3xl font-bold text-white mb-2">Transforming Ideas into Scalable Tech</h1>
           <div className="text-sm text-gray-400">
             <div>Certified CORDA DLT Developer</div>
@@ -40,7 +40,7 @@ function App() {
           </h1>
         </Card>
 
-        <Card className="col-span-3 flex justify-between flex-col rounded-lg p-6">
+        <Card className="col-span-3 flex justify-between flex-col rounded-lg p-6 bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f]">
           <h2 className="text-lg font-semibold">Blockchain Expertise</h2>
           <div className="flex gap-2">
             <div className="bg-purple-600 text-white py-1 px-3 rounded-full text-sm">Corda</div>
@@ -69,13 +69,13 @@ function App() {
 
         <div className="col-span-6 grid grid-cols-2 gap-6 row-span-2 h-auto">
           <FeatureCard
-            className="top-right"
+            className="top-right bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f]"
             icon={GitBranch}
             title="Certifications"
             description="R3 certified CORDA DLT developer (2019)."
           />
           <FeatureCard
-            className="top-left"
+            className="top-left bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f]"
             icon={KeyRound}
             title="Recent Projects"
             description="Redbelly Blockchain."
@@ -84,7 +84,7 @@ function App() {
         </div>
 
         {/* GitHub and LinkedIn Card (Center-Right) */}
-        <Card className="col-span-3 flex justify-center items-center flex-col">
+        <Card className="col-span-3 flex justify-center items-center flex-col bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f]">
           <h2 className="text-2xl font-bold text-white mb-2">Blockchain Solutions</h2>
           <div className="text-sm text-gray-400">
             <div>Developed Redbelly Blockchain and several enterprise projects</div>
@@ -98,7 +98,7 @@ function App() {
 
 
         {/* Bottom Row */}
-        <Card className="col-span-3 flex justify-center items-center gap-5">
+        <Card className="bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f] col-span-3 flex justify-center items-center gap-5">
           <a href="https://github.com/ashubisht" target="_blank" rel="noopener noreferrer">
             <button className="text-lg font-semibold text-white bg-gray-800 hover:bg-gray-700 py-2 px-6 rounded-2xl">
               <i className="bx bxl-github text-[35px]"></i>
@@ -114,7 +114,7 @@ function App() {
         <MetricCard
           value="1.2M"
           label="Transactions handled in a single job cycle"
-          className="col-span-3 top-right"
+          className="col-span-3 top-right bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f]"
         />
       </div>
     </div>
