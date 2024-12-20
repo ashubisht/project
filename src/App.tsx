@@ -8,9 +8,13 @@ import "./index.css";
 import FluidCursor from "./components/FluidCursor";
 import { GridPattern } from "./components/magicui/dot-pattern";
 import FollowingEye from "./components/following-eye";
-import { LetterPullup, TypingAnimation } from "./components/magicui/TypingAnimation";
 
 function App() {
+
+  const isHighResolution = window.innerWidth === 3072 && window.innerHeight === 1920;
+  const containerClass = isHighResolution ? "resolution-3072" : "";
+
+
   return (
     <div className="relative min-h-screen bg-[#13141f] p-6">
       {/* GridPattern as the background */}
@@ -21,51 +25,52 @@ function App() {
       </div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 lg:max-w-7xl lg:mx-auto lg:grid sm:grid-cols-12 md:min-h-screen md:flex md:flex-col md:gap-6 gap-4 flex flex-col">
+      <div className="relative z-10 2xl:max-w-full 2xl:h-auto lg:max-w-7xl lg:mx-auto lg:grid sm:grid-cols-12 md:min-h-screen md:flex md:flex-col md:gap-6 gap-4 flex flex-col">
 
         {/* Top Row */}
         <Card className="col-span-3 flex flex-col justify-between bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f]">
-          <h1 className="text-3xl font-bold text-white mb-2">Transforming Ideas into Scalable Tech</h1>
+          <h1 className="text-3xl font-bold text-white mb-2 2xl:text-4xl">Transforming Ideas into Scalable Tech</h1>
           <div className="text-sm text-gray-400">
-            <div>Certified CORDA DLT Developer</div>
-            <div>Blockchain | Cloud | DevOps</div>
+            <div className="2xl:text-2xl">Certified CORDA DLT Developer</div>
+            <div className='2xl:text-2xl'>Blockchain | Cloud | DevOps</div>
           </div>
         </Card>
 
         <Card className="col-span-6 text-center py-12 bg-[radial-gradient(circle_at_bottom,#c09bff,#825aff_40%,#4b1ea8_80%)]">
           <Logo />
-          <h1 className="text-4xl font-bold text-white mt-6 mb-4">
+          <h1 className="text-4xl font-bold text-white mt-6 mb-4 2xl:text-7xl">
             {/* <LetterPullup words="Blockchain & Software Engineer" delay={0.11} /> */}
             Blockchain & Software Engineer
           </h1>
         </Card>
 
         <Card className="col-span-3 flex justify-between flex-col rounded-lg p-6 bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f]">
-          <h2 className="text-lg font-semibold">Blockchain Expertise</h2>
+          <h2 className="text-lg font-semibold 2xl:text-3xl">Blockchain Expertise</h2>
           <div className="flex gap-2">
-            <div className="bg-purple-600 text-white py-1 px-3 rounded-full text-sm">Corda</div>
-            <div className="bg-purple-600 text-white py-1 px-3 rounded-full text-sm">Ethereum</div>
+            <div className="bg-purple-600 text-white py-1 px-3 rounded-full text-sm 2xl:text-2xl">Corda</div>
+            <div className="bg-purple-600 text-white py-1 px-3 rounded-full text-sm 2xl:text-2xl">Ethereum</div>
           </div>
-          <h2 className="text-lg font-semibold mt-2">Cloud Platforms</h2>
+          <h2 className="text-lg font-semibold mt-2 2xl:text-3xl">Cloud Platforms</h2>
           <div className="flex space-x-2 mt-2">
-            <span className="bg-gray-700 text-white py-1 px-3 rounded-full text-sm">AWS</span>
-            <span className="bg-gray-700 text-white py-1 px-3 rounded-full text-sm">GCP</span>
+            <span className="bg-gray-700 text-white py-1 px-3 rounded-full text-sm 2xl:text-2xl">AWS</span>
+            <span className="bg-gray-700 text-white py-1 px-3 rounded-full text-sm 2xl:text-2xl">GCP</span>
+            <span className="bg-gray-700 text-white py-1 px-3 rounded-full text-sm 2xl:text-2xl">GCP</span>
           </div>
-          <h2 className="text-lg font-semibold mt-2">Languages</h2>
+          <h2 className="text-lg font-semibold mt-2 2xl:text-3xl">Languages</h2>
           <div className="flex space-x-2 mt-2">
-            <p className="bg-purple-700 text-white py-1 px-3 rounded-full text-sm">Java</p>
-            <p className="bg-purple-700 text-white py-1 px-3 rounded-full text-sm">Node.js</p>
-            <p className="bg-purple-700 text-white py-1 px-3 rounded-full text-sm">Golang</p>
+            <p className="bg-purple-700 text-white py-1 px-3 rounded-full text-sm 2xl:text-2xl">Java</p>
+            <p className="bg-purple-700 text-white py-1 px-3 rounded-full text-sm 2xl:text-2xl">Node.js</p>
+            <p className="bg-purple-700 text-white py-1 px-3 rounded-full text-sm 2xl:text-2xl">Golang</p>
           </div>
-          <h2 className="text-lg font-semibold mt-2">Protocols</h2>
+          <h2 className="text-lg font-semibold mt-2 2xl:text-3xl">Protocols</h2>
           <div className="flex space-x-2 mt-2">
-            <span className="bg-gray-700 text-white py-1 px-3 rounded-full text-sm">REST</span>
-            <span className="bg-gray-700 text-white py-1 px-3 rounded-full text-sm">GraphQL</span>
+            <span className="bg-gray-700 text-white py-1 px-3 rounded-full text-sm 2xl:text-2xl">REST</span>
+            <span className="bg-gray-700 text-white py-1 px-3 rounded-full text-sm 2xl:text-2xl">GraphQL</span>
           </div>
         </Card>
 
         {/* Middle Row */}
-        <MetricCard value="8+" label="Years Of Experience" className="col-span-3" />
+        <MetricCard value="8+" label="Years Of Experience" className="col-span-3 bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f] " />
 
         <div className="col-span-6 grid grid-cols-2 gap-6 row-span-2 h-auto">
           <FeatureCard
@@ -75,19 +80,20 @@ function App() {
             description="R3 certified CORDA DLT developer (2019)."
           />
           <FeatureCard
-            className="top-left bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f]"
+            className="top-left bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f] text-right "
             icon={KeyRound}
             title="Recent Projects"
             description="Redbelly Blockchain."
             descriptionOne="StockPlan Connect (Morgan Stanley)."
+            classNameRight="text-right"
           />
         </div>
 
         {/* GitHub and LinkedIn Card (Center-Right) */}
         <Card className="col-span-3 flex justify-center items-center flex-col bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f]">
-          <h2 className="text-2xl font-bold text-white mb-2">Blockchain Solutions</h2>
+          <h2 className="text-2xl font-bold text-white mb-2 2xl:text-4xl">Blockchain Solutions</h2>
           <div className="text-sm text-gray-400">
-            <div>Developed Redbelly Blockchain and several enterprise projects</div>
+            <div className="2xl:text-2xl text-center">Developed Redbelly Blockchain and several enterprise projects</div>
           </div>
         </Card>
 
@@ -101,12 +107,12 @@ function App() {
         <Card className="bg-gradient-to-br from-[#0f0f1f] via-[#1a1b2e] to-[#28293f] col-span-3 flex justify-center items-center gap-5">
           <a href="https://github.com/ashubisht" target="_blank" rel="noopener noreferrer">
             <button className="text-lg font-semibold text-white bg-gray-800 hover:bg-gray-700 py-2 px-6 rounded-2xl">
-              <i className="bx bxl-github text-[35px]"></i>
+              <i className="bx bxl-github text-[35px] 2xl:text-6xl"></i>
             </button>
           </a>
           <a href="https://www.linkedin.com/in/utkarsh-bisht/" target="_blank" rel="noopener noreferrer">
             <button className="text-lg font-semibold text-white bg-blue-800 hover:bg-blue-700 py-2 px-6 rounded-2xl">
-              <i className="bx bxl-linkedin-square text-[35px]"></i>
+              <i className="bx bxl-linkedin-square text-[35px] 2xl:text-6xl"></i>
             </button>
           </a>
         </Card>

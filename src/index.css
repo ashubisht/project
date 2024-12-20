@@ -33,3 +33,43 @@ body {
 
 
 }
+/* Styles for 3072x1920 resolution */
+@media screen and (min-width: 3072px) and (min-height: 1920px) {
+  .resolution-3072 {
+    padding: 8vh 8vw; /* Increase overall padding for large screens */
+  }
+
+  .resolution-3072 .text-large {
+    font-size: 3rem; /* Larger font for headings */
+  }
+
+  .resolution-3072 .text-xl {
+    font-size: 2.25rem; /* Adjust subheadings */
+  }
+
+  .resolution-3072 .text-base {
+    font-size: 1.25rem; /* Increase body text slightly */
+  }
+
+  .resolution-3072 .card-padding {
+    padding: 2.5rem; /* Add more padding to cards */
+  }
+
+  .resolution-3072 .gap-adjust {
+    gap: 3rem; /* Adjust gaps between elements */
+  }
+
+  .resolution-3072 .metric-size {
+    font-size: 5rem; /* Metric values */
+    line-height: 1.2;
+  }
+
+  .resolution-3072 .metric-label-size {
+    font-size: 1.75rem; /* Metric labels */
+  }
+
+  .resolution-3072 .center-circle {
+    width: 24rem; /* Resize the center circle */
+    height: 24rem;
+  }
+}
