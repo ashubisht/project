@@ -63,7 +63,7 @@ export default function Component() {
   }, []);
 
   return (
-    <div className="flex min-h-[200px] md:min-h-[300px] lg:min-h-[400px] w-full items-center justify-center hover:scale-105 transition-transform duration-200">
+    <div className="2k:min-w-[30rem] 2k:min-h-[30rem] flex min-h-[200px] md:min-h-[300px] lg:min-h-[400px] w-full items-center justify-center hover:scale-105 transition-transform duration-200">
       <svg
         width="200"
         height="200"

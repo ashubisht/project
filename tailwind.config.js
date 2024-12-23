@@ -11,6 +11,9 @@ export default {
         background: '#13141f',
         card: '#1a1b2e',
       },
+      screens: {
+        '2k': { 'raw': '(min-width: 2560px)' },
+      },
     },
   },
   plugins: [],
