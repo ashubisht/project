@@ -94,7 +94,7 @@ function App() {
         </Card>
 
         {/* Center Circle with Image */}
-        <div className="2k:w-[30rem] 2k:h-[30rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[18rem] lg:h-[18rem] rounded-full border-4 border-gray-800 shadow-lg bg-white mt-[9rem] md:mt-[5rem] lg:mt-[3rem] 2k:mt-[-3rem]">
+        <div className="2k:w-[30rem] 2k:h-[30rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[18rem] lg:h-[18rem] rounded-full shadow-lg mt-[9rem] md:mt-[5rem] lg:mt-[3rem] 2k:mt-[-3rem]">
           <FollowingEye />
         </div>
 
