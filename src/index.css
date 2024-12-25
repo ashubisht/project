@@ -76,18 +76,17 @@ body {
 
 @media (min-width: 2560px) {
   .card {
-    --r: 95px;
-    --s: 190px;
+    --r: 80px;  /* Increased radius */
+    --s: 250px; /* Increased curve size */
     color: #fff;
-    --_m: /calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%, #0000 72%) no-repeat;
+    --_m: /calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 75%, #0000 77%) no-repeat;
   }
 
-  /* Apply custom masks for each corner */
   .top-right {
     mask:
       right calc(var(--s) + var(--r)) top 0 var(--_m),
       right calc(var(--s) + var(--r)) var(--_m),
-      radial-gradient(var(--s) at 100% 0, #0000 99%, #000 101%) calc(-1 * var(--r)) var(--r) no-repeat,
+      radial-gradient(var(--s) at 100% 0, #0000 99.5%, #000 100%) calc(-1 * var(--r)) var(--r) no-repeat,
       conic-gradient(at calc(100% - var(--s) - 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
         #0000 25%, #000 0);
   }
@@ -96,7 +95,7 @@ body {
     mask:
       calc(var(--s) + var(--r)) 0 var(--_m),
       0 calc(var(--s) + var(--r)) var(--_m),
-      radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r) no-repeat,
+      radial-gradient(var(--s) at 0 0, #0000 99.5%, #000 100%) var(--r) var(--r) no-repeat,
       conic-gradient(at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
         #000 75%, #0000 0);
   }

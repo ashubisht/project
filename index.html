@@ -6,6 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.54/build/spline-viewer.js"></script>
   <title>Utkarsh Bisht | Portfolio</title>
   <style>
     * {
@@ -23,32 +24,30 @@
       /* clip-path: circle(50px at 0 0); */
       clip-path: path("M 0 20 C 0 0, 20 0, 40 0 L 100% 0, 100% 100%, 0 100%, 0 40 C 0 30, 0 20 Z");
     }
-
     .card {
-      --r: 25px;
-      --s: 100px;
-      color: #fff;
-      --_m: /calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%, #0000 72%) no-repeat;
-    }
+          --r: 40px;  /* Increased radius */
+          --s: 150px; /* Increased curve size */
+          color: #fff;
+          --_m: /calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 75%, #0000 77%) no-repeat;
+        }
 
-    /* Apply custom masks for each corner */
-    .top-right {
-      mask:
-        right calc(var(--s) + var(--r)) top 0 var(--_m),
-        right calc(var(--s) + var(--r)) var(--_m),
-        radial-gradient(var(--s) at 100% 0, #0000 99%, #000 101%) calc(-1 * var(--r)) var(--r) no-repeat,
-        conic-gradient(at calc(100% - var(--s) - 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
-          #0000 25%, #000 0);
-    }
+        .top-right {
+          mask:
+            right calc(var(--s) + var(--r)) top 0 var(--_m),
+            right calc(var(--s) + var(--r)) var(--_m),
+            radial-gradient(var(--s) at 100% 0, #0000 99.5%, #000 100%) calc(-1 * var(--r)) var(--r) no-repeat,
+            conic-gradient(at calc(100% - var(--s) - 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
+              #0000 25%, #000 0);
+        }
 
-    .top-left {
-      mask:
-        calc(var(--s) + var(--r)) 0 var(--_m),
-        0 calc(var(--s) + var(--r)) var(--_m),
-        radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r) no-repeat,
-        conic-gradient(at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
-          #000 75%, #0000 0);
-    }
+        .top-left {
+          mask:
+            calc(var(--s) + var(--r)) 0 var(--_m),
+            0 calc(var(--s) + var(--r)) var(--_m),
+            radial-gradient(var(--s) at 0 0, #0000 99.5%, #000 100%) var(--r) var(--r) no-repeat,
+            conic-gradient(at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
+              #000 75%, #0000 0);
+        }
 
     .bottom-left {
       mask:

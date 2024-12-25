@@ -1,13 +1,14 @@
 import React from "react";
 import { GitBranch, KeyRound } from "lucide-react";
 import { Logo } from "./components/Logo";
+import Move from "./components/Move";
 import { Card } from "./components/Card";
 import { MetricCard } from "./components/MetricCard";
 import { FeatureCard } from "./components/FeatureCard";
 import "./index.css";
 import FluidCursor from "./components/FluidCursor";
 import { GridPattern } from "./components/magicui/dot-pattern";
-import FollowingEye from "./components/following-eye";
+import FollowingEye from "./components/following-eye"; 
 
 function App() {
   const isHighResolution = window.innerWidth === 3072 && window.innerHeight === 1920;
